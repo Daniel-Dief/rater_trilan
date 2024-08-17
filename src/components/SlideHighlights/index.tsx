@@ -15,7 +15,7 @@ export default function SlideHighlights({ arrFilms } : Props) {
                     <FilmCard
                         key={key}
                         id={film.id}
-                        name={film.name}
+                        title={film.title}
                         vote_average={film.vote_average}
                         backdrop_path={film.backdrop_path}
                     />

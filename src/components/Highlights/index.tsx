@@ -1,4 +1,4 @@
-import SmallFilmBox from "../SmallFilmBox";
+import FilmCard from "../FilmCard";
 import highlightsRequest from "../../common/requests/highlightsRequest";
 import { useEffect, useState } from "react";
 import IFilmHighlight from "../../common/types/IFilmHighlight";
@@ -18,18 +18,10 @@ export default function Highlights() {
     }, []);
 
     return (
-        <>
-            {
-                films.slice(1).map((film, key) => (
-                    <SmallFilmBox
-                        key={key}
-                        id={film.id}
-                        name={film.name}
-                        vote_average={film.vote_average}
-                        backdrop_path={film.backdrop_path}
-                    />
-                ))
-            }
-        </>
+        <div>
+            <SlideHighlights 
+                arrFilms={films}
+            />
+        </div>
     );
 }

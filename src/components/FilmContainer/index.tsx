@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import IFilmDetails from "../../common/types/IFilmDetais";
+import IFilmDetails from "../../common/types/IFilmDetails";
 import { Container, InHighlight, InHighlightLabel, Title, TrailerButton, Synopsis, Stars, Details, DetailsFilm, Genres, StarsTop, DivTop } from "./styles"
 import movieDetails from "../../common/requests/movieDetails";
 

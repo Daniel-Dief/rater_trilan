@@ -1,4 +1,4 @@
-export default interface IFilmDetais {
+export default interface IFilmDetails {
     id: number
     title: string
     overview: string

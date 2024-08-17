@@ -178,7 +178,6 @@ export const StarsTop = styled.div`
 `
 
 export const DivTop = styled.div`
-    width: 98px;
     height: 32px;
     gap: 6px;
     display: flex;

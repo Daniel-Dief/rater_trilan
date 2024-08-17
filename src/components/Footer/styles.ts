@@ -7,8 +7,6 @@ export const FooterDiv = styled.footer`
     padding: 24px;
     gap: 12px;
     margin: auto;
-    position: fixed;
-    bottom: 0;
 `
 
 export const FooterLabel = styled.p`

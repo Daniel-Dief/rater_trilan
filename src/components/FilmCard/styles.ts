@@ -41,6 +41,10 @@ export const Icon = styled.img`
 export const Title = styled.span`
     width: 100%;
     height: 23px;
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 22.4px;
 `
 
 export const TrailerButton = styled.button`

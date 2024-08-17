@@ -1,6 +1,6 @@
 import highlightsRequest from "../../common/requests/highlightsRequest";
 import { useEffect, useState } from "react";
-import IFilmHighlight from "../../common/types/IFilmHighlight";
+import IFilmSummary from "../../common/types/IFilmSummary";
 import SlideHighlights from "../SlideHighlights";
 import FilmContainer from "../FilmContainer";
 import { HighlightsContainer } from "./styles";
@@ -9,7 +9,7 @@ import { HighlightsContainer } from "./styles";
 //sem que tonasse o Highlights asyncrono, por isso, usei o ChatGPT
 
 export default function Highlights() {
-    const [films, setFilms] = useState<Array<IFilmHighlight>>([]);
+    const [films, setFilms] = useState<Array<IFilmSummary>>([]);
 
     useEffect(() => {
         (async () => {

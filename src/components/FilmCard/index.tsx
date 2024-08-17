@@ -1,7 +1,7 @@
 import { CardMovie, StarsBox, Icon, Title, TrailerButton, DivBottom } from "./styles"
-import IFilmHighlight from "../../common/types/IFilmHighlight"
+import IFilmSummary from "../../common/types/IFilmSummary"
 
-export default function FilmCard({ id, title, vote_average, backdrop_path } : IFilmHighlight) {
+export default function FilmCard({ id, title, vote_average, backdrop_path } : IFilmSummary) {
     const backgroundUrl = process.env.REACT_APP_IMAGE_API_URL + backdrop_path
 
     return (

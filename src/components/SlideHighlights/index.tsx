@@ -1,9 +1,9 @@
-import IFilmHighlight from "../../common/types/IFilmHighlight";
+import IFilmSummary from "../../common/types/IFilmSummary";
 import FilmCard from "../FilmCard";
 import { Slider, Label, Container } from "./styles"
 
 interface Props {
-    arrFilms : Array<IFilmHighlight>
+    arrFilms : Array<IFilmSummary>
 }
 
 export default function SlideHighlights({ arrFilms } : Props) {

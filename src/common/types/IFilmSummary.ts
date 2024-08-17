@@ -1,4 +1,4 @@
-export default interface IFilmHighlight {
+export default interface IFilmSummary {
     backdrop_path: string
     vote_average: number
     title: string

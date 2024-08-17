@@ -20,6 +20,15 @@ export const Container = styled.div<ContainerProps>`
     align-items: flex-start;
     flex-direction: column;
     justify-content: end;
+
+    @media screen and (max-width: 400px){
+        width: 343px;
+        height: 284px;
+        padding: 12px;
+        gap: 6px;
+        border-radius: 24px;
+        opacity: 0px;
+    }
 `
 
 export const InHighlight = styled.div`
@@ -32,6 +41,14 @@ export const InHighlight = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    @media screen and (max-width: 400px) {
+        width: 32px;
+        height: 32px;
+        padding: 4px;
+        gap: 4px;
+        border-radius: 8px;
+    }
 `
 
 export const InHighlightLabel = styled.p`
@@ -40,11 +57,10 @@ export const InHighlightLabel = styled.p`
     font-size: 20px;
     line-height: 20px;
     color: #EEEEEE;
-`
-
-export const Icon = styled.img`
-    width: 20px;
-    height: 20px;
+    
+    @media screen and (max-width: 400px) {
+        display: none;
+    }
 `
 
 export const Title = styled.span`
@@ -80,6 +96,16 @@ export const Synopsis = styled.p`
     text-align: left;
     width: 550px;
     color: #EEEEEE;
+
+    @media screen and (max-width: 400px) {
+        max-width: 100%;
+        max-height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
 `
 
 export const Details = styled.div`
@@ -90,6 +116,10 @@ export const Details = styled.div`
     align-items: center;
     justify-content: space-evenly;
     color: #B4B4B4;
+    
+    @media screen and (max-width: 400px) {
+        display: none;
+    }
 `
 
 export const Stars = styled.div`
@@ -123,4 +153,35 @@ export const Genres = styled.p`
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+`
+
+export const StarsTop = styled.div`
+    width: 60px;
+    height: 32px;
+    border-radius: 8px;
+    padding: 4px;
+    gap: 12px;
+    background-color: #FFFFFF66;
+    display: none;
+    align-items: center;
+    color: #EEEEEE;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
+
+
+    @media screen and (max-width: 400px) {
+        display: flex;
+    }
+`
+
+export const DivTop = styled.div`
+    width: 98px;
+    height: 32px;
+    gap: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 `

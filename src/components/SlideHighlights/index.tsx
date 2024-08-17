@@ -1,6 +1,6 @@
 import IFilmHighlight from "../../common/types/IFilmHighlight";
 import FilmCard from "../FilmCard";
-import { Slider, Label } from "./styles"
+import { Slider, Label, Container } from "./styles"
 
 interface Props {
     arrFilms : Array<IFilmHighlight>
@@ -8,19 +8,21 @@ interface Props {
 
 export default function SlideHighlights({ arrFilms } : Props) {
     return (
-        <Slider>
+        <Container>
             <Label>Destaques também</Label>
+            <Slider>
             {
                 arrFilms.slice(1).map((film, key) => (
                     <FilmCard
-                        key={key}
-                        id={film.id}
-                        title={film.title}
-                        vote_average={film.vote_average}
-                        backdrop_path={film.backdrop_path}
+                    key={key}
+                    id={film.id}
+                    title={film.title}
+                    vote_average={film.vote_average}
+                    backdrop_path={film.backdrop_path}
                     />
                 ))
             }
-        </Slider>
+            </Slider>
+        </Container>
     )
 }

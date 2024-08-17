@@ -8,6 +8,9 @@ export const CardMovie = styled.div<CardMovieProps>`
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
         url(${props => props.background});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 350px;
     height: 253.67px;
     margin: auto;
@@ -28,6 +31,12 @@ export const StarsBox = styled.div`
     border-radius: 8px;
     padding: 4px;
     gap: 12px;
+    color: #EEEEEE;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24.2px;
+    text-align: left;
     background-color: #FFFFFF66;
     display: flex;
     align-items: center;

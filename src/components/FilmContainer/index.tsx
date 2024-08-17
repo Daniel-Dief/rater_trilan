@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import IFilmDetails from "../../common/types/IFilmDetais";
-import { Container, InHighlight, Icon, InHighlightLabel, Title, TrailerButton, Synopsis, Stars, Details, DetailsFilm, Genres } from "./styles"
+import { Container, InHighlight, InHighlightLabel, Title, TrailerButton, Synopsis, Stars, Details, DetailsFilm, Genres, StarsTop, DivTop } from "./styles"
 import movieDetails from "../../common/requests/movieDetails";
 
 
@@ -43,14 +43,20 @@ export default function FilmContainer({ id } : Props) {
         <Container
             background={backgroundUrl}
         >
-            <InHighlight>
-                <Icon src={require("../../assets/images/highlight.png")} alt="Destaque"/>
-                <InHighlightLabel>Em Destaque</InHighlightLabel>
-            </InHighlight>
+            <DivTop>
+                <InHighlight>
+                    <img src={require("../../assets/images/highlight.png")} alt="Destaque"/>
+                    <InHighlightLabel>Em Destaque</InHighlightLabel>
+                </InHighlight>
+                <StarsTop>
+                    <img src={require("../../assets/images/star.png")} alt="Star" />
+                    <p>{Math.round(film.vote_average * 10) / 10}</p>
+                </StarsTop>
+            </DivTop>
             <Title>{film.title}</Title>
             <Details>
                 <Stars>
-                    <Icon src={require("../../assets/images/star.png")} alt="Star" />
+                    <img src={require("../../assets/images/star.png")} alt="Star" />
                     <p>{Math.round(film.vote_average * 10) / 10} | {vote_count}</p>
                 </Stars>
                 <DetailsFilm>
@@ -66,7 +72,7 @@ export default function FilmContainer({ id } : Props) {
             </Synopsis>
             <TrailerButton>
                 <p>Assistir ao trailer</p>
-                <Icon src={require("../../assets/images/play.png")} alt="Play" />
+                <img src={require("../../assets/images/play.png")} alt="Play" />
             </TrailerButton>
         </Container>
     )

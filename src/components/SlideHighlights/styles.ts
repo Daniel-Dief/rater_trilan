@@ -5,6 +5,19 @@ export const Slider = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    @media screen and (max-width: 400px) {
+        flex-direction: row;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
 `
 
 export const Label = styled.p`
@@ -28,3 +41,11 @@ export const Label = styled.p`
         border-radius: 4px; /* Arredonda todas as bordas do pseudo-elemento */
     }
 `;
+
+export const Container = styled.div`
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+`

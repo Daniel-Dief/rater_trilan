@@ -21,8 +21,8 @@ export const Slider = styled.div`
 `
 
 export const Label = styled.p`
-    position: relative; /* Adicionado para que o ::before seja posicionado corretamente */
-    border-left: 4px solid transparent; /* A borda original será escondida pelo pseudo-elemento */
+    position: relative;
+    border-left: 4px solid transparent;
     padding-left: 12px;
     color: #EEEEEE;
     font-family: 'Inter', sans-serif;
@@ -34,11 +34,11 @@ export const Label = styled.p`
         content: '';
         position: absolute;
         top: 0;
-        left: 0; /* Posiciona o pseudo-elemento no início da borda esquerda */
+        left: 0;
         height: 100%;
-        width: 4px; /* Largura da borda */
-        background-color: #EEEEEE; /* Cor da borda */
-        border-radius: 4px; /* Arredonda todas as bordas do pseudo-elemento */
+        width: 4px;
+        background-color: #EEEEEE;
+        border-radius: 4px;
     }
 `;
 

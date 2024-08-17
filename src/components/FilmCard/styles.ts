@@ -6,10 +6,11 @@ interface CardMovieProps {
 
 export const CardMovie = styled.div<CardMovieProps>`
     background-image: 
-        linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%), 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
         url(${props => props.background});
-    width: 380px;
+    width: 350px;
     height: 253.67px;
+    margin: auto;
     border-radius: 24px;
     padding: 12px;
     gap: 12px;

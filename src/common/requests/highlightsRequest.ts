@@ -1,5 +1,5 @@
 export default async function highlightsRequest() {    
-    const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
+    const url = process.env.REACT_APP_API_URL + 'tv/popular?language=pt-br&page=1';
     const options = {
         method: 'GET',
         headers: {
@@ -18,5 +18,5 @@ export default async function highlightsRequest() {
         return new Array<Object>
     })
 
-    return resJson;
+    return resJson.slice(0, 4);
 }

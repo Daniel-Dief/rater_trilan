@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.header `
-    width: 1440px;
+    width: 100%;
+    box-sizing: border-box;
     height: 96px;
     padding: 24px;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 400px){
+        height: 135.44px;
+        padding: 24px 16px 16px 16px;
+        gap: 24px;
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const LogoImg = styled.img`

@@ -1,7 +1,8 @@
 import styled from "styled-components"
 
 export const FooterDiv = styled.footer`
-    width: 1440px;
+    width: 100%;
+    box-sizing: border-box;
     height: 67px;
     padding: 24px;
     gap: 12px;

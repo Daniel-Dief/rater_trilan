@@ -64,6 +64,7 @@ export const InputSearch = styled.input`
     line-height: 19.36px;
     border: none;
     background-color: #191919;
+    color: #FFFFFF;
 `
 
 export const SlicersDiv = styled.div`

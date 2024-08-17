@@ -1,5 +1,5 @@
 export default async function highlightsRequest() {    
-    const url = process.env.REACT_APP_API_URL + 'tv/popular?language=pt-br&page=1';
+    const url = process.env.REACT_APP_API_URL + 'movie/popular?language=pt-br&page=1';
     const options = {
         method: 'GET',
         headers: {

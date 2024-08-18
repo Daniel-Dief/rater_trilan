@@ -5,13 +5,13 @@ export default interface IFilmDetails {
     backdrop_path: string
     vote_average: number
     vote_count: number
-    genres: Array<Genre>
+    genres: Array<IGenre>
     release_date: Date
     runtime: number
     adult: boolean
 }
 
-interface Genre {
+export interface IGenre {
     id: number
     name: string
 }

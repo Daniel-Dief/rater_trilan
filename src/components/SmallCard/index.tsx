@@ -10,9 +10,9 @@ export default function SmallCard({ iten } : Props) {
     const year = new Date(iten.release_date ?? iten.first_air_date!).getFullYear();
 
     function redirectMovie() {
-        iten.title ?
-        window.location.href = `/movie?id=${iten.id}`
-        :"";
+        if(iten.title){
+            window.location.href = `/movie?id=${iten.id}`
+        }
     }
 
     return (

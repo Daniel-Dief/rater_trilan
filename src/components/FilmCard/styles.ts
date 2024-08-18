@@ -6,7 +6,7 @@ interface CardMovieProps {
 
 export const CardMovie = styled.div<CardMovieProps>`
     background-image: 
-        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
         url(${props => props.background});
     background-size: cover;
     background-position: center;

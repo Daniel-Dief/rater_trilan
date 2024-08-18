@@ -1,6 +1,7 @@
 import IPeopleSummary from "../../common/types/IPeopleSummary";
 import IFilmSummary from "../../common/types/IFilmSummary";
 import FilmCard from "../FilmCard";
+import PeopleCard from "../PeopleCard";
 import { SliderBox, Title, Container, ScrollButtonBox, ScrollButton, DivTop } from "./styles";
 import { useRef } from "react";
 
@@ -44,7 +45,18 @@ export default function Slider({ title, arrFilms, arrPeople } : Props) {
                             />
                         ))
                     :
-                    ""
+                    arrPeople
+                    ?
+                        arrPeople.map((people, key) => (
+                            <PeopleCard
+                                key={key}
+                                id={people.id}
+                                name={people.name}
+                                age={people.age}
+                                profile_path={people.profile_path}
+                            />
+                        ))
+                    : ""
                 }
             </SliderBox>
         </Container>

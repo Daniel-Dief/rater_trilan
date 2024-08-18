@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Slider = styled.div`
-    width: 380px;
     display: flex;
     flex-direction: column;
     gap: 12px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         flex-direction: row;
-        max-width: 100%;
+        width: 95vw;
         overflow-x: auto;
         scrollbar-width: none;
         -ms-overflow-style: none;

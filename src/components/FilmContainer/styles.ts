@@ -21,7 +21,7 @@ export const Container = styled.div<ContainerProps>`
     flex-direction: column;
     justify-content: end;
 
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 600px){
         width: 343px;
         height: 284px;
         padding: 12px;
@@ -42,7 +42,7 @@ export const InHighlight = styled.div`
     align-items: center;
     justify-content: space-evenly;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         width: 32px;
         height: 32px;
         padding: 4px;
@@ -58,7 +58,7 @@ export const InHighlightLabel = styled.p`
     line-height: 20px;
     color: #EEEEEE;
     
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         display: none;
     }
 `
@@ -97,7 +97,7 @@ export const Synopsis = styled.p`
     width: 550px;
     color: #EEEEEE;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         max-width: 100%;
         max-height: 50px;
         overflow: hidden;
@@ -117,7 +117,7 @@ export const Details = styled.div`
     justify-content: space-evenly;
     color: #B4B4B4;
     
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         display: none;
     }
 `
@@ -172,7 +172,7 @@ export const StarsTop = styled.div`
     text-align: left;
 
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 600px) {
         display: flex;
     }
 `

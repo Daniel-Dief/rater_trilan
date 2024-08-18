@@ -9,7 +9,7 @@ export const HighlightsContainer = styled.div`
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 600px){
         padding: 16px 16px 0px 16px;
         gap: 24px;
         flex-direction: column;

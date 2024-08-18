@@ -22,11 +22,11 @@ export default function Biography({ people } : Props) {
             </Session>
             <Session>
                 <Label>Origem:</Label>
-                <Value>{people.place_of_birth}</Value>
+                <Value>{people.place_of_birth ?? "Desconhecido"}</Value>
             </Session>
             <Session>
                 <Label>Sobre:</Label>
-                <Value>{people.biography}</Value>
+                <Value>{people.biography ?? "Não informado"}</Value>
             </Session>
         </BiographyContainer>
     )

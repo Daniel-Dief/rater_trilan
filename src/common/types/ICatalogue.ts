@@ -1,4 +1,5 @@
 export default interface ICatalogue {
+    id: number
     backdrop_path: string
     vote_average: number
     character: string

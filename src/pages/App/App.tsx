@@ -1,6 +1,8 @@
 import './App.css';
 import Home from '../Home';
 import Actor from '../Actor';
+import Movie from '../Movie';
+
 export default function App() {
   let returnPage : JSX.Element;
 
@@ -10,6 +12,9 @@ export default function App() {
       break;
     case 'actor':
       returnPage = <Actor />
+      break;
+    case 'movie':
+      returnPage = <Movie />
       break;
     default:
       returnPage = <Home />

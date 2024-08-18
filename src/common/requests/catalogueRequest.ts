@@ -12,11 +12,19 @@ export default async function movieDetails(id : number) {
     .then(async(data) => {
         return data.json()
         .then(data => data.cast)
-        .then(data => data.slice(0, 150))
+        .then(data => (
+            data ?
+             data.slice(0, 150)
+            : []
+        ))
     })
     .catch(err => {
         console.error(err)
     })
 
-    return [resJson, Math.floor(resJson.length / 15)];
+    let maxPage = Math.floor(resJson.length / 15);
+    
+    maxPage = maxPage === 0 ? 1 : maxPage
+    
+    return [resJson, maxPage];
 }

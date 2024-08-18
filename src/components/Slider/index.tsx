@@ -1,7 +1,8 @@
 import IPeopleSummary from "../../common/types/IPeopleSummary";
 import IFilmSummary from "../../common/types/IFilmSummary";
 import FilmCard from "../FilmCard";
-import { SliderBox, Title, Container } from "./styles";
+import { SliderBox, Title, Container, ScrollButtonBox, ScrollButton, DivTop } from "./styles";
+import { useRef } from "react";
 
 interface Props {
     title: string
@@ -10,13 +11,26 @@ interface Props {
 }
 
 export default function Slider({ title, arrFilms, arrPeople } : Props) {
-    console.log(arrFilms);
-    
+    const sliderBoxRef =  useRef<HTMLDivElement>(null);
+
+    function scrollLeft() {
+        sliderBoxRef.current?.scrollBy({ left: -400, behavior: 'smooth' }); //apenas essa linha ChatGPT
+    }
+
+    function scrollRight() {
+        sliderBoxRef.current?.scrollBy({ left: 400, behavior: 'smooth' }); //apenas essa linha ChatGPT
+    }
 
     return (
         <Container>
-            <Title>{title}</Title>
-            <SliderBox>
+            <DivTop>
+                <Title>{title}</Title>
+                <ScrollButtonBox>
+                    <ScrollButton onClick={scrollLeft} src={require("../../assets/images/scroll-left.png")} />
+                    <ScrollButton onClick={scrollRight} src={require("../../assets/images/scroll-right.png")} />
+                </ScrollButtonBox>
+            </DivTop>
+            <SliderBox ref={sliderBoxRef}>
                 {
                     arrFilms 
                     ?

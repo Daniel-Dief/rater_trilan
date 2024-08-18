@@ -46,3 +46,24 @@ export const Container = styled.div`
     align-items: start;
     justify-content: flex-start;
 `
+
+export const ScrollButtonBox = styled.div`
+    width: 72px;
+    gap: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 600px) {
+        visibility: hidden;
+    }
+`
+
+export const ScrollButton = styled.img`
+    cursor: pointer;
+`
+export const DivTop = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+`

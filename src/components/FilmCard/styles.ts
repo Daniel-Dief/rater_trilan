@@ -70,6 +70,7 @@ export const TrailerButton = styled.button`
     border: none;
     color: #FFFFFF;
     box-shadow: 0px 0px 12px 0px #00000040;
+    cursor: pointer;
 `
 
 export const DivBottom = styled.div`

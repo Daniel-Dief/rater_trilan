@@ -20,6 +20,7 @@ export const HeaderContainer = styled.header `
 export const LogoImg = styled.img`
     width: 128px;
     height: 34.88px;
+    cursor: pointer;
 `
 export const FilterCamp = styled.div`
     width: 377px;

@@ -11,6 +11,7 @@ export const SmallCardBox = styled.div`
     gap: 8px;
     border-radius: 16px;
     display: flex;
+    cursor: pointer;
 `
 
 export const Image = styled.div<ImageProps>`

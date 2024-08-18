@@ -39,6 +39,10 @@ export default function FilmContainer({ id } : Props) {
 
     let runtime = `${Math.floor(film.runtime / 60)}h ${film.runtime % 60}m`
     
+    function redirectMovie() {
+        window.location.href = `/movie?id=${id}`;
+    }
+
     return (
         <Container
             background={backgroundUrl}
@@ -70,7 +74,7 @@ export default function FilmContainer({ id } : Props) {
             <Synopsis>
                 {film.overview}
             </Synopsis>
-            <TrailerButton>
+            <TrailerButton onClick={redirectMovie}>
                 <p>Assistir ao trailer</p>
                 <img src={require("../../assets/images/play.png")} alt="Play" />
             </TrailerButton>

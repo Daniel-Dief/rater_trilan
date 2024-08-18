@@ -1,4 +1,4 @@
-export default async function highlightsRequest() {    
+export default async function releasesRequest() {    
     const url = process.env.REACT_APP_API_URL + 'movie/now_playing?language=pt-br&page=1&region=br';
     const options = {
         method: 'GET',

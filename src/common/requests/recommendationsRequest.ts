@@ -1,4 +1,4 @@
-export default async function highlightsRequest() {    
+export default async function recommendationsRequest() {    
     const url = process.env.REACT_APP_API_URL + 'trending/movie/day?language=pt-br';
     const options = {
         method: 'GET',

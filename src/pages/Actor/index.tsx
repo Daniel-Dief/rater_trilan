@@ -1,12 +1,14 @@
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import Biography from "../../components/Biography"
-import { ActorContainer } from "./styles"
+import Catalogue from "../../components/Catalogue"
+import { ActorContainer, Main } from "./styles"
 import { useEffect, useState } from "react";
 import peopleDetails from "../../common/requests/peoplesDetails";
 import IPeopleDetails from "../../common/types/IPeopleDetails";
 
 const defaultPeople : IPeopleDetails = {
+    id: 0,
     name: "default",
     birthday: "default",
     deathday: "default",
@@ -30,17 +32,25 @@ export default function Actor(){
     return (
         <ActorContainer>
             <Header />
-            {
-                people
-                ?
-                <Biography
-                    people={people}
-                />
-                :
-                <Biography
-                    people={defaultPeople}
-                />
-            }
+            <Main>
+                {
+                    people
+                    ?
+                    <>
+                    <Catalogue />
+                    <Biography
+                        people={people}
+                    />
+                    </>
+                    :
+                    <>
+                    <Catalogue />
+                    <Biography
+                        people={defaultPeople}
+                        />
+                    </>
+                }
+            </Main>
             <Footer />
         </ActorContainer>
     )

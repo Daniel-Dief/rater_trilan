@@ -5,14 +5,20 @@ import Slider from "../../components/Slider";
 import { useEffect, useState } from "react";
 import IFilmSummary from "../../common/types/IFilmSummary";
 import releasesRequest from "../../common/requests/releasesRequest";
+import recommendationsRequest from "../../common/requests/recommendationsRequest";
 
 export default function Home() {
     const [releases, setReleases] = useState<Array<IFilmSummary>>([]);
+    const [recommendations, setRecommendations] = useState<Array<IFilmSummary>>([]);
 
     useEffect(() => {
         (async () => {
-            const films = await releasesRequest();
-            setReleases(films);
+            const tempFilms = await releasesRequest();
+            setReleases(tempFilms);
+        })();
+        (async () => {
+            const tempFilms = await recommendationsRequest();
+            setRecommendations(tempFilms);
         })();
     }, []);  
 
@@ -23,6 +29,10 @@ export default function Home() {
             <Slider
                 title="Ultimos lançamentos"
                 arrFilms={releases}
+            />
+            <Slider
+                title="Recomendados"
+                arrFilms={recommendations}
             />
             <Footer />
         </>

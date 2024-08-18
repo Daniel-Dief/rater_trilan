@@ -18,7 +18,5 @@ export default async function highlightsRequest() {
         return new Array<Object>
     })
 
-    console.log(url);
-
     return resJson;
 }

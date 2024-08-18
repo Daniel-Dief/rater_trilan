@@ -5,8 +5,6 @@ export const BiographyContainer = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
 `
 
 export const PerfilImg = styled.img`
@@ -39,6 +37,7 @@ export const Label = styled.p`
     font-weight: 500;
     text-align: left;
     color: #EEEEEE;
+    margin: 8px 0 5px 0;
 `
 
 export const Value = styled.p`
@@ -47,4 +46,5 @@ export const Value = styled.p`
     font-weight: 500;
     text-align: left;
     color: #B4B4B4;
+    margin: 0;
 `

@@ -1,6 +1,7 @@
 import IFilmSummary from "./IFilmSummary"
 
 export default interface IPeopleDetails {
+    id: number
     name: string
     birthday: string
     deathday: string

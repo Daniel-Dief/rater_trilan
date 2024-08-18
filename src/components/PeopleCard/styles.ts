@@ -19,6 +19,14 @@ export const CardPeople = styled.div<CardPeopleProps>`
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover{
+        background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+        url(${props => props.background});
+    }
 `
 
 export const Name = styled.span`

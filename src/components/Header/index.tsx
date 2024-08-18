@@ -1,9 +1,13 @@
 import { HeaderContainer, LogoImg, FilterCamp, SearchCamp, LensDiv, Image, InputSearch, SlicersDiv, EmptyDiv } from "./styles";
 
 export default function Header(){
+    function redirectHome() {
+        window.location.href = `/home`;
+    }
+
     return (
         <HeaderContainer>
-            <LogoImg src={require("../../assets/images/logo.png")} alt="Rater" />
+            <LogoImg onClick={redirectHome} src={require("../../assets/images/logo.png")} alt="Rater" />
             <FilterCamp>
                 <SearchCamp>
                     <LensDiv>

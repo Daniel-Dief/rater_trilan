@@ -5,6 +5,13 @@ export const CatalogueContainer = styled.div`
     align-items: center;
     flex-wrap: wrap;
     padding: 12px;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 export const Label = styled.p`
@@ -33,6 +40,18 @@ export const Grid = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 600px) {
+        height: 318px;
+        flex-direction: column;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 `
 
 export const Navigators = styled.div`
@@ -46,6 +65,10 @@ export const Navigators = styled.div`
     display: flex;
     justify-content: flex-end;
     gap: 12px;
+
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 `
 
 export const Buttons = styled.div`
@@ -53,6 +76,7 @@ export const Buttons = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 `
 
 export const NavButton = styled.img`

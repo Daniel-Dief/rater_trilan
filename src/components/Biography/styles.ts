@@ -5,6 +5,12 @@ export const BiographyContainer = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 600px){
+        width: 90%;
+        margin: 24px auto;
+    }
 `
 
 export const PerfilImg = styled.img`

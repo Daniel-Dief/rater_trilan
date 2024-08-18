@@ -37,17 +37,17 @@ export default function Actor(){
                     people
                     ?
                     <>
-                    <Catalogue />
                     <Biography
                         people={people}
                     />
+                    <Catalogue />
                     </>
                     :
                     <>
-                    <Catalogue />
                     <Biography
                         people={defaultPeople}
                         />
+                    <Catalogue />
                     </>
                 }
             </Main>

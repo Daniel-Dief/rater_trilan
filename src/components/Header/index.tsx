@@ -18,7 +18,9 @@ export default function Header(){
     }
 
     function onInputBlur() {
-        setInputFocus(false)        
+        setTimeout(() => {
+            setInputFocus(false)        
+        }, 10)
     }
 
 

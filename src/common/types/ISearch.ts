@@ -1,4 +1,5 @@
 export default interface ISearch {
+    id: number
     media_type: "tv" | "person" | "movie"
     //tv
     name?: string

@@ -11,6 +11,10 @@ export const BannerBox = styled.div`
     gap: 12px;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 600px) {
+        margin-top: 24px;
+    }
 `
 
 export const Movie = styled.div<MovieProps>`
@@ -23,13 +27,19 @@ export const Movie = styled.div<MovieProps>`
     margin: auto;
     width: 90%;
     height: 476px;
-    padding: 48px;
+    padding: 48px 48px 12px 48px;
     gap: 12px;
     border-radius: 24px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+
+    @media screen and (max-width: 600px){
+        width: 100%;
+        box-sizing: border-box;
+        height: 200px;
+    }
 `
 
 export const TrailerButton = styled.div`
@@ -46,6 +56,14 @@ export const TrailerButton = styled.div`
     border: none;
     color: #FFFFFF;
     box-shadow: 0px 0px 12px 0px #00000040;
+
+    @media screen and (max-width: 600px){
+        width: 100%;
+        padding: 8px;
+        gap: 8px;
+        border-radius: 12px;
+        opacity: 0px;
+    }
 `
 
 export const Icon = styled.img`
@@ -69,10 +87,20 @@ export const Info = styled.div`
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @media screen and (max-width: 600px){
+        flex-direction: column;
+        width: 100%;
+    }
 `
 
 export const About = styled.div`
     width: calc(100% / 3 * 2);
+
+    @media screen and (max-width: 600px) {
+        width: 100%;
+        box-sizing: border-box;
+    }
 `
 
 export const DivTop = styled.div`
@@ -80,6 +108,7 @@ export const DivTop = styled.div`
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+
 `
 
 export const Title = styled.span`
@@ -88,6 +117,10 @@ export const Title = styled.span`
     font-weight: 700;
     line-height: 22.4px;
     color: #FFFFFF;
+
+    @media screen and (max-width: 600px){
+        font-size: 20px;
+    }
 `
 
 export const StarsBox = styled.div`

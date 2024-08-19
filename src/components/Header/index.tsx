@@ -19,6 +19,7 @@ export default function Header(){
         setInputFocus(true)
     }
 
+    //Usei ChatGPT pois estava funcionando, porem era uma gambiarra
     function handleBlur (event: React.FocusEvent<HTMLInputElement>) {
         if (containerRef.current && !containerRef.current.contains(event.relatedTarget as Node)) {
             setInputFocus(false)

@@ -22,12 +22,12 @@ export const LogoImg = styled.img`
     height: 34.88px;
     cursor: pointer;
 `
+
 export const FilterCamp = styled.div`
-    width: 377px;
-    height: 48px;
-    gap: 12px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 `
 
 export const SearchCamp = styled.div`
@@ -66,6 +66,7 @@ export const InputSearch = styled.input`
     border: none;
     background-color: #191919;
     color: #FFFFFF;
+    outline: none;
 `
 
 export const SlicersDiv = styled.div`
@@ -81,4 +82,18 @@ export const SlicersDiv = styled.div`
 export const EmptyDiv = styled.div`
     width: 128px;
     height: 48px;
+`
+
+export const DivTop = styled.div`
+    width: 377px;
+    height: 48px;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+`
+
+export const DivFloat = styled.div `
+    position: absolute;
+    z-index: 1;
+    top: 96px;
 `

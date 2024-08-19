@@ -95,5 +95,9 @@ export const DivTop = styled.div`
 export const DivFloat = styled.div `
     position: absolute;
     z-index: 1;
-    top: 96px;
+    top: 100px;
+
+    @media screen and (max-width: 600px) {
+        top: 150px;
+    }
 `

@@ -12,6 +12,7 @@ export const GenreContainer = styled.p<GenreProps>`
     border: 2px solid #313131;
     cursor: pointer;
     background-color: ${props => props.background};
+    transition: .3s ease;
 
     font-family: 'Inter', sans-serif;
     font-size: 12px;

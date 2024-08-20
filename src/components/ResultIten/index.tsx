@@ -11,7 +11,7 @@ export default function ResultIten({ iten } : Props) {
     const evaluationValue = iten.vote_average ? Math.round(iten.vote_average * 10) / 10 : 0
 
     function redirectMedia() {
-        if(iten.media_type == "movie") {
+        if(iten.media_type === "movie") {
             window.location.href = `/movie?id=${iten.id}`;
         } else {
             window.location.href = `/actor?id=${iten.id}`;
@@ -25,7 +25,7 @@ export default function ResultIten({ iten } : Props) {
                 <DivTop>
                     <Title>{iten.title ?? iten.name}</Title>
                     {
-                        iten.media_type != "person" ?
+                        iten.media_type !== "person" ?
                         <StarsBox>
                             <Icon src={require("../../assets/images/star.png")} />
                             <Evaluation>{evaluationValue}</Evaluation>
@@ -35,7 +35,7 @@ export default function ResultIten({ iten } : Props) {
                 </DivTop>
                 <Summary>
                     {
-                        iten.media_type != "person"
+                        iten.media_type !== "person"
                         ?    <Text>{year}</Text>
                         :   <Text>{iten.known_for_department}</Text>
                     }

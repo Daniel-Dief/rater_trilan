@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+export const SlicersContainer = styled.div`
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+`
+
 export const FiltersContainer = styled.div`
     width: 377px;
     padding: 12px;

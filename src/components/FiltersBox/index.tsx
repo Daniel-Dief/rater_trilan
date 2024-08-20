@@ -1,13 +1,37 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef} from "react"
 import genreRequest from "../../common/requests/genreRequest"
 import { IGenre } from "../../common/types/IFilmDetails"
 import GenreBox from "../GenreBox"
+import CalendarContainer from "../CalendarContainer"
+import { Value } from "../../common/types/TValue"
 
-import { FiltersContainer, Session, Title, Genres, Label, Dates, Date, InputDate, Icon, Divider } from "./styles"
+
+import { FiltersContainer, Session, Title, Genres, Label, Dates, Date, InputDate, Icon, Divider, SlicersContainer } from "./styles"
 
 export default function FiltersBox() {
+    const [iniDate, setIniDate] = useState<Value>(null);
+    const [endDate, setEndDate] = useState<Value>(null);
     const [genres, setGenres] = useState<Array<IGenre>>([]);
     const [selectedGenres, setSelectedGenres] = useState<Array<number>>([])
+
+    const [iniInputFocus, setIniInputFocus] = useState<boolean>(false);
+    const [endInputFocus, setEndInputFocus] = useState<boolean>(false);
+
+    const iniInputRef = useRef<HTMLInputElement>(null);
+    const endInputRef = useRef<HTMLInputElement>(null);
+
+    const iniCalendarRef = useRef<HTMLDivElement>(null);
+    const endCalendarRef = useRef<HTMLDivElement>(null);
+
+    function onIniInputFocus() {
+        setIniInputFocus(true)
+        setEndInputFocus(false)
+    }
+
+    function onEndInputFocus() {
+        setEndInputFocus(true)
+        setIniInputFocus(false)
+    }
 
     useEffect(() => {
         (async () => {
@@ -26,7 +50,41 @@ export default function FiltersBox() {
         setSelectedGenres(temp);
     }
 
+    function handleClickOutside(event: MouseEvent) {
+        if (iniCalendarRef.current && !iniCalendarRef.current.contains(event.target as Node)){
+            setIniInputFocus(false);
+        }
+        if (endCalendarRef.current && !endCalendarRef.current.contains(event.target as Node)){
+            setEndInputFocus(false);
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
+    function toogleCalendar() {
+        if(iniInputFocus){
+            return <CalendarContainer
+                ref={iniCalendarRef}
+                onChange={setIniDate}
+                value={iniDate}
+            />
+        } else if(endInputFocus) {
+            return <CalendarContainer
+                ref={endCalendarRef}
+                onChange={setEndDate}
+                value={endDate}
+            />
+        }
+    }
+
     return (
+        <SlicersContainer>
         <FiltersContainer>
             <Session>
                 <Title>Gêneros cinematográficos</Title>
@@ -49,16 +107,20 @@ export default function FiltersBox() {
                 <Title>Data de lançamento</Title>
                 <Dates>
                     <Date>
-                        <InputDate type="date"/>
+                        <InputDate onFocus={onIniInputFocus} ref={iniInputRef} type="text" placeholder="00/00/0000" value={iniDate?.toLocaleString().slice(0, 10)}/>
                         <Icon src={require("../../assets/images/calendar.png")} />
                     </Date>
                     <Label>a</Label>
                     <Date>
-                        <InputDate type="date"/>
+                        <InputDate onFocus={onEndInputFocus} ref={endInputRef} type="text" placeholder="00/00/0000" value={endDate?.toLocaleString().slice(0, 10)}/>
                         <Icon src={require("../../assets/images/calendar.png")} />
                     </Date>
                 </Dates>
             </Session>
         </FiltersContainer>
+        {
+            toogleCalendar()
+        }
+        </SlicersContainer>
     )
 }

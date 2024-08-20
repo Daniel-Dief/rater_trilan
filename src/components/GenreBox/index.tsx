@@ -3,10 +3,18 @@ import { GenreContainer } from "./styles";
 
 interface Props {
     genre: IGenre
+    selected?: boolean
+    onClick?: () => void
 }
 
-export default function GenreBox({ genre } : Props) {
+export default function GenreBox({ genre, selected, onClick} : Props) {
     return (
-        <GenreContainer>{ genre.name }</GenreContainer>
+        <GenreContainer
+            background={selected ? "#313131" : "transparent"}
+            onClick={onClick}
+        >
+            { genre.name }
+        </GenreContainer>
     )
 }
+

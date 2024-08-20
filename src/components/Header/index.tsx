@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { HeaderContainer, LogoImg, FilterCamp, SearchCamp, LensDiv, Image, InputSearch, SlicersDiv, EmptyDiv, DivTop, DivFloat } from "./styles";
 import ISearch from "../../common/types/ISearch";
 import ResultBox from "../ResultBox";
+import FiltersBox from "../FiltersBox";
 
 export default function Header(){
     const [resultSearch, setResultSearch] = useState<Array<ISearch>>([]);
@@ -60,6 +61,9 @@ export default function Header(){
                     </DivFloat>
                     : ""
                 }
+                <DivFloat>
+                    <FiltersBox />
+                </DivFloat>
             </FilterCamp>
             <EmptyDiv />
         </HeaderContainer>
